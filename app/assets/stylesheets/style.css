@@ -140,10 +140,14 @@ tr,td {
 #baby-step-body {
     font-size: 13px;
     line-height: 18px;
+    margin-left: 0px;
+    margin-top: 24px;
+    margin-bottom: 0px;
     color: #65686f;
 }
 #dynamic-element {
-    margin-top: 0px;
+    margin-top: 40px;
+    margin-left: 0px;
 }
 
 .dynamic-element-name {
