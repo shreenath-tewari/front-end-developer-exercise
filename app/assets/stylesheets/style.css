@@ -15,7 +15,7 @@ html, body {
 }
 
 .active {
-    background: #ffffff;
+    background: #ffffff !important;
 }
 
 header img {
@@ -104,72 +104,44 @@ tr,td {
     padding-left: 5px;
 }
 
-.baby-step-heading h1 {
+.baby-step-heading {
+    display: flex;
+    align-items: center;
+}
+
+#main-heading {
     font-size: 30px;
     font-weight: bold;
     color: #36abe1;
     line-height: 20px;
-    vertical-align: middle;
 }
 
-.baby-step-heading h3 {                
+#sub-heading {
     font-size: 18px;
     font-weight: 400;
     color: #5c6366;
     line-height: 20px;
-    vertical-align: middle;
 }
 
-.baby-step-heading img {
+#img-heading img.resize {
     height: 40px;
-}                
-
+}
 
 #baby-step-body {
     font-size: 13px;
     line-height: 18px;
     color: #65686f;
 }
-.nav-item > a:hover {
-    background-color: #ffffff;
-    font-weight: 600;
-    color: #36abe1;
+#dynamic-element {
+    margin-top: 0px;
 }
 
-.nav-item > a {
-    text-decoration: none;
-    color: #9ba0a4;
-}
-
-.nav-item > a > img {
-    vertical-align: middle;
-    margin-right: 9px;
-    padding: 15px;
-}
-
-.baby-step-heading h1 {
-    font-size: 30px;
-    font-weight: bold;
-    color: #36abe1;
-    line-height: 20px;
-    vertical-align: middle;
-}
-
-.baby-step-heading h3 {                
-    font-size: 18px;
-    font-weight: 400;
-    color: #5c6366;
-    line-height: 20px;
-    vertical-align: middle;
-}
-
-.baby-step-heading img {
-    height: 40px;
-}                
-
-
-#baby-step-body {
+.dynamic-element-name {
+    color: #6fbee7;
     font-size: 13px;
-    line-height: 18px;
+}
+
+.dynamic-element-other {
     color: #65686f;
+    font-size: 13px;
 }

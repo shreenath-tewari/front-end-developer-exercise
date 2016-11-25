@@ -54,16 +54,16 @@ function babyStepFriends(n) {
                     msg = "";
                     break;
                 case 1:
-                    msg = sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + "  is also in Baby Step " + n;
+                    msg = '<span class="dynamic-element-name">' + sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + '</span>' + '<span class="dynamic-element-other">' + " is also in Baby Step " + n + '</span>';
                     break;
                 case 2:
-                    msg = sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + " and " + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + " are also in Baby Step " + n;
+                    msg = '<span class="dynamic-element-name">' + sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + '</span>' + '<span class="dynamic-element-other">' + " and " + '</span>' + '<span class="dynamic-element-name">' + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + '</span>' + '<span class="dynamic-element-other">' + " are also in Baby Step " + n + '</span>';
                     break;
                 case 3:
-                    msg = sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + ", " + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + "and 1 other friend are also in Baby Step " + n;
+                    msg = '<span class="dynamic-element-name">' + sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + '</span>' + '<span class="dynamic-element-other">' + ", " + '</span>' + '<span class="dynamic-element-name">' + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + '</span>' + '<span class="dynamic-element-other">' + "and 1 other friend are also in Baby Step " + n + '</span>';
                     break;
                 default:
-                    msg = sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + ", " + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + "and 2 other friends are also in Baby Step " + n;
+                    msg = '<span class="dynamic-element-name">' + sameBabyStepFriends[0].firstName + " " + sameBabyStepFriends[0].lastName + '<span class="dynamic-element-other">' + ", " + '</span>' + '<span class="dynamic-element-name">' + sameBabyStepFriends[1].firstName + " " + sameBabyStepFriends[1].lastName + '</span>' + '<span class="dynamic-element-other">' + " and 2 other friends are also in Baby Step " + n + '</span>';
                     break;
             }
             document.getElementById('dynamic-element').innerHTML = msg;
@@ -77,7 +77,7 @@ function babyStepFriends(n) {
 
 function bodyText(n) {
     document.getElementById('img-heading').src = "assets/images/icons/individual/icons_large_bs"+n+"_blue.png";
-    document.getElementById('main-heading').innerHTML = "Baby Step "+n;
+    document.getElementById('main-heading').innerHTML = "Baby Step " + n;
     document.getElementById('sub-heading').innerHTML = subHeadings[n-1];
     document.getElementById('baby-step-body').innerHTML = bodyBabySteps[n-1];
     babyStepFriends(n);
