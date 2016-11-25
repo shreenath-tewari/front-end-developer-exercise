@@ -83,6 +83,18 @@ function bodyText(n) {
     babyStepFriends(n);
 };
 
+function mouseHover(n) {
+    document.getElementById('text'+n).style.color = "#36abe1";
+    document.getElementById('text'+n).style.fontWeight = 600;
+    document.getElementById('img'+n).src = "assets/images/icons/individual/icons_small_bs" + n +"_blue.png";
+};
+
+function mouseOut(n) {
+    document.getElementById('text'+n).style.color = "#9ba0a4";
+    document.getElementById('text'+n).style.fontWeight = 400;
+    document.getElementById('img'+n).src = "assets/images/icons/individual/icons_small_bs" + n + ".png";
+};
+
 //Click Event
 document.getElementById('item1').addEventListener("click", function() {
     bodyText(1);
@@ -114,51 +126,51 @@ document.getElementById('item7').addEventListener("click", function() {
 
 //Mouseover Event
 document.getElementById('item1').addEventListener("mouseover",function() {
-    document.getElementById('img1').src = "assets/images/icons/individual/icons_small_bs1_blue.png";
+    mouseHover(1);
 });
 document.getElementById('item1').addEventListener("mouseout",function() {
-    document.getElementById('img1').src = "assets/images/icons/individual/icons_small_bs1.png";
+    mouseOut(1);
 });
 
 document.getElementById('item2').addEventListener("mouseover",function() {
-    document.getElementById('img2').src = "assets/images/icons/individual/icons_small_bs2_blue.png";
+    mouseHover(2);
 });
 document.getElementById('item2').addEventListener("mouseout",function() {
-    document.getElementById('img2').src = "assets/images/icons/individual/icons_small_bs2.png";
+    mouseOut(2);
 });
 
 document.getElementById('item3').addEventListener("mouseover",function() {
-    document.getElementById('img3').src = "assets/images/icons/individual/icons_small_bs3_blue.png";
+    mouseHover(3);
 });
 document.getElementById('item3').addEventListener("mouseout",function() {
-    document.getElementById('img3').src = "assets/images/icons/individual/icons_small_bs3.png";
-});
-
-document.getElementById('item5').addEventListener("mouseover",function() {
-    document.getElementById('img5').src = "assets/images/icons/individual/icons_small_bs5_blue.png";
-});
-document.getElementById('item5').addEventListener("mouseout",function() {
-    document.getElementById('img5').src = "assets/images/icons/individual/icons_small_bs5.png";
+    mouseOut(3);
 });
 
 document.getElementById('item4').addEventListener("mouseover",function() {
-    document.getElementById('img4').src = "assets/images/icons/individual/icons_small_bs4_blue.png";
+    mouseHover(4);
 });
 document.getElementById('item4').addEventListener("mouseout",function() {
-    document.getElementById('img4').src = "assets/images/icons/individual/icons_small_bs4.png";
+    mouseOut(4);
+});
+
+document.getElementById('item5').addEventListener("mouseover",function() {
+    mouseHover(5);
+});
+document.getElementById('item5').addEventListener("mouseout",function() {
+    mouseOut(5);
 });
 
 document.getElementById('item6').addEventListener("mouseover",function() {
-    document.getElementById('img6').src = "assets/images/icons/individual/icons_small_bs6_blue.png";
+    mouseHover(6);
 });
 document.getElementById('item6').addEventListener("mouseout",function() {
-    document.getElementById('img6').src = "assets/images/icons/individual/icons_small_bs6.png";
+    mouseOut(6);
 });
 
 document.getElementById('item7').addEventListener("mouseover",function() {
-    document.getElementById('img7').src = "assets/images/icons/individual/icons_small_bs7_blue.png";
+    mouseHover(7);
 });
 document.getElementById('item7').addEventListener("mouseout",function() {
-    document.getElementById('img7').src = "assets/images/icons/individual/icons_small_bs7.png";
+    mouseOut(7);
 });
 
