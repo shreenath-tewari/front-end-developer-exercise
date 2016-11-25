@@ -114,6 +114,9 @@ tr,td {
     font-weight: bold;
     color: #36abe1;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 #sub-heading {
@@ -121,6 +124,13 @@ tr,td {
     font-weight: 400;
     color: #5c6366;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#img-heading {
+    margin-right: 10px;
 }
 
 #img-heading img.resize {
