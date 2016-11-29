@@ -1,7 +1,5 @@
 //Text
 
-
-
 var bodyBabySteps = [
     "An emergency fund is for those unexpected events in life that you can’t plan for: the loss of a job, an unexpected pregnancy, a faulty car transmission, and the list goes on and on. It’s not a matter of if these events will happen; it’s simply a matter of when they will happen. This beginning emergency fund will keep life’s little Murphies from turning into new debt while you work off the old debt. If a real emergency happens, you can handle it with your emergency fund. No more borrowing. It’s time to break the cycle of debt!",
     "List your debts, excluding the house, in order. The smallest balance should be your number one priority. Don’t worry about interest rates unless two debts have similar payoffs. If that’s the case, then list the higher interest rate debt first. The point of the debt snowball is simply this: You need some quick wins in order to stay pumped up about getting out of debt! Paying off debt is not always about math. It’s about motivation. Personal finance is 20% head knowledge and 80% behavior. When you start knocking off the easier debts, you will see results and you will stay motivated to dump your debt.",
@@ -27,6 +25,8 @@ var subHeadings = [
 
 $(document).ready(function() {
     bodyText(1);
+    $('.nav-item').removeClass('active');
+    $(this).addClass('active');
 });
 
 
@@ -95,87 +95,20 @@ function mouseOut(n) {
 };
 
 //Click events
-$('#item1').click(function() {
-    bodyText(1);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
 
-$('#item2').click(function() {
-    bodyText(2);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
-
-$('#item3').click(function() {
-    bodyText(3);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
-
-$('#item4').click(function() {
-    bodyText(4);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
-
-$('#item5').click(function() {
-    bodyText(5);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
-
-$('#item6').click(function() {
-    bodyText(6);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
-});
-
-$('#item7').click(function() {
-    bodyText(7);
+$('.nav-item').click(function () {
+    var dataItem = $(this).data('item');
+    bodyText(dataItem);
     $('.nav-item').removeClass('active');
     $(this).addClass('active');
 });
 
 //MouseOver events
+
 $("#item1").hover(function() {
-    mouseHover(1);
+    var dataItem = $(this).data('item');
+    mouseHover(dataItem);
 }, function() {
-    mouseOut(1);
-});
-
-$("#item2").hover(function() {
-    mouseHover(2);
-}, function() {
-    mouseOut(2);
-});
-
-$("#item3").hover(function() {
-    mouseHover(3);
-}, function() {
-    mouseOut(3);
-});
-
-$("#item4").hover(function() {
-    mouseHover(4);
-}, function() {
-    mouseOut(4);
-});
-
-$("#item5").hover(function() {
-    mouseHover(5);
-}, function() {
-    mouseOut(5);
-});
-
-$("#item6").hover(function() {
-    mouseHover(6);
-}, function() {
-    mouseOut(6);
-});
-
-$("#item7").hover(function() {
-    mouseHover(7);
-}, function() {
-    mouseOut(7);
+    var dataItem = $(this).data('item');
+    mouseOut(dataItem);
 });
