@@ -14,10 +14,6 @@ html, body {
     background-color: #ffffff;
 }
 
-.active {
-    background: #ffffff !important;
-}
-
 header img {
     position: relative;
     width: 100%;
@@ -68,19 +64,29 @@ header img {
 background: linear-gradient(to right, #ebeced 0%,#ecf0f1 97%,#d1d5d6 100%);
 }
 
-.nav-item:hover {
-    background: #ffffff;
-}
-
-.nav-item > a:hover {
-    background-color: #ffffff;
-    font-weight: 600;
-    color: #36abe1;
-}
-
 .nav-item > a {
     text-decoration: none;
     color: #9ba0a4;
+}
+
+.nav-item:hover {
+    background: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-item:hover > a {
+    color: #36abe1;
+}
+
+.nav-item.active {
+    background: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-item.active > a {
+    color: #36abe1;
 }
 
 .nav-item > a > img {
