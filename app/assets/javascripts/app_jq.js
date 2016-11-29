@@ -25,8 +25,6 @@ var subHeadings = [
 
 $(document).ready(function() {
     bodyText(1);
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
 });
 
 
@@ -105,7 +103,7 @@ $('.nav-item').click(function () {
 
 //MouseOver events
 
-$("#item1").hover(function() {
+$(".nav-item").hover(function() {
     var dataItem = $(this).data('item');
     mouseHover(dataItem);
 }, function() {

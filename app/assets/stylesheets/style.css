@@ -101,10 +101,6 @@ background: linear-gradient(to right, #ebeced 0%,#ecf0f1 97%,#d1d5d6 100%);
     height: 567px;
 }
 
-tr,td {
-    padding: 5px;
-}
-
 .container p{
     margin-left: 6px;
     padding-left: 5px;
@@ -115,7 +111,7 @@ tr,td {
     align-items: center;
 }
 
-#main-heading {
+.main-heading h1 {
     font-size: 30px;
     font-weight: bold;
     color: #36abe1;
@@ -125,25 +121,25 @@ tr,td {
     border: 0;
 }
 
-#sub-heading {
+h3 {
     font-size: 18px;
     font-weight: 400;
     color: #5c6366;
     line-height: 20px;
     padding: 0;
-    margin: 0;
+    margin-top: 5px;
     border: 0;
 }
 
-#img-heading {
+.img-heading {
     margin-right: 10px;
 }
 
-#img-heading img.resize {
+.img-heading img.resize {
     height: 40px;
 }
 
-#baby-step-body {
+.baby-step-body {
     font-size: 13px;
     line-height: 18px;
     margin-left: 0px;
@@ -151,7 +147,8 @@ tr,td {
     margin-bottom: 0px;
     color: #65686f;
 }
-#dynamic-element {
+
+.dynamic-element {
     margin-top: 40px;
     margin-left: 0px;
 }
