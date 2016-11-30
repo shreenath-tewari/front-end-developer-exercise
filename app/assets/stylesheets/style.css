@@ -47,8 +47,9 @@ header img {
     line-height: 44px;
 }
 
-.navbar {
+.nav-bar {
     width: 200px;
+    position: relative;
 }
 
 .side-nav {
@@ -58,6 +59,15 @@ header img {
     padding: 0;
 }
 
+.ganja {
+    position: absolute;
+    display: block;
+    width: 270px;
+    height: 60px;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
 .nav-item {
     position: relative;
     display: flex;
@@ -65,8 +75,8 @@ header img {
     justify-content: flex-end;
     float: left;
     clear: both;
-    border-top: 1px solid #ffffff; 
-    height: 60px;                
+    border-top: 1px solid #ffffff;
+    height: 60px;
     width: 270px;
     padding: 10px;
     font-size: 18px;
@@ -76,20 +86,21 @@ header img {
 .nav-item > a {
     text-decoration: none;
     color: #9ba0a4;
+    z-index: 200;
 }
 
 .nav-item:hover {
-    background: #ffffff;
-    font-weight: 600;
+    /*background: #ffffff;
+    font-weight: 600;*/
     cursor: pointer;
 }
 
-.nav-item:hover > a {
+/*.nav-item:hover > a {
     color: #36abe1;
-}
+}*/
 
 .nav-item.active {
-    background: #ffffff;
+    /*background: #ffffff;*/
     font-weight: 600;
     cursor: pointer;
 }

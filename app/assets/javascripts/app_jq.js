@@ -7,7 +7,6 @@ $(document).ready(function () {
         // error callback
         console.log(errorThrown);
     });*/
-
     $.ajax({
         url: "baby-steps.json",
         type: "get",
@@ -64,15 +63,11 @@ function babyStepFriends(n) {
     return msg;
 }
 
-function mouseHover(n) {
-    //$('#text'+n).css("color", "#36abe1");
-    //$('#text'+n).css("font-weight", 600);
+function setImage(n) {
     $('#img'+n).attr("src", "assets/images/icons/individual/icons_small_bs" + n +"_blue.png");
 }
 
-function mouseOut(n) {
-    //$('#text'+n).css("color", "#9ba0a4");
-    //$('#text'+n).css("font-weight", 400);
+function resetImage(n) {
     $('#img'+n).attr("src", "assets/images/icons/individual/icons_small_bs" + n + ".png");
 }
 
@@ -80,22 +75,32 @@ function mouseOut(n) {
 
 $('.nav-item').click(function () {
     var dataItem = $(this).data('item');
+    var self = this;
+    var i;
+    $('.nav-item').removeClass('active');
+    for (i = 1; i <= 7; i++) {
+        if(dataItem != i) {
+            resetImage(i);
+        }
+    }
+    $('.ganja').animate({'top': ((dataItem-1)*60)+'px'}, 500, function () {
+        setImage(dataItem);
+        $(self).addClass('active');
+    });
     $('.container.mover').animate({'margin-top': ((dataItem-1)*-567)+'px'}, 1000, function () {
         // load friends in this step here
         var html = babyStepFriends(dataItem);
         $('.container-'+dataItem+' .dynamic-element').html(html);
     });
 
-    $('.nav-item').removeClass('active');
-    $(this).addClass('active');
 });
 
 //MouseOver events
 
-$(".nav-item").hover(function () {
+/*$(".nav-item").hover(function () {
     var dataItem = $(this).data('item');
     mouseHover(dataItem);
 }, function () {
     var dataItem = $(this).data('item');
     mouseOut(dataItem);
-});
+});*/
